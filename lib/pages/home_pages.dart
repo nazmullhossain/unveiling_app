@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:jiffy/jiffy.dart';
 import 'package:video_app/pages/video_play_pages.dart';
 
 import '../model/video_model.dart';
@@ -61,9 +62,13 @@ class _HomePageState extends State<HomePage> {
                               final data = disListData![index];
 
                               return InkWell(
-                                onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (_)=>VideoPlayPage(videoModel: data,)));
-
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) => VideoPlayPage(
+                                                videoModel: data,
+                                              )));
                                 },
                                 child: Column(
                                   children: [
@@ -76,6 +81,7 @@ class _HomePageState extends State<HomePage> {
                                               image: NetworkImage(
                                                   "${data.thumbnail}"))),
                                       child: Container(
+                                        padding: EdgeInsets.all(5),
                                           margin: EdgeInsets.only(
                                               bottom: 10, right: 10),
                                           decoration: BoxDecoration(
@@ -84,14 +90,16 @@ class _HomePageState extends State<HomePage> {
                                               color: Colors.black),
                                           child: Text(
                                             "${data.duration}",
-                                            style: TextStyle(color: Colors.white),
+                                            style:
+                                                TextStyle(color: Colors.white),
                                           )),
                                     ),
                                     SizedBox(
                                       height: 10,
                                     ),
                                     Container(
-                                      margin:EdgeInsets.symmetric(horizontal: 30),
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 30),
                                       child: Row(
                                         children: [
                                           ClipRRect(
@@ -121,7 +129,11 @@ class _HomePageState extends State<HomePage> {
                                     //   height: 10,
                                     // ),
                                     Container(
-                                      margin: EdgeInsets.symmetric(horizontal: 50),
+                                      margin:
+                                          EdgeInsets.only(
+                                            left: 80,
+                                            bottom: 20
+                                          ),
                                       child: Row(
                                         children: [
                                           Text(
@@ -134,16 +146,24 @@ class _HomePageState extends State<HomePage> {
                                           SizedBox(
                                             width: 10,
                                           ),
-                                          Text(
-                                            "${data.dateAndTime}",
-                                            style: GoogleFonts.inter(
-                                                color: Color(0xFF718096),
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w400),
-                                          )
+
+                                      Text(data.dateAndTime!.length > 10 ? '${data.dateAndTime!.substring(0, 10)}' : data.dateAndTime.toString(),
+                                        style: GoogleFonts.inter(
+                                                     color: Color(0xFF718096),
+                                                     fontSize: 13,
+                                                     fontWeight: FontWeight.w400),
+                                      )
+                                      // Text(
+                                      //       "Feb 21, 2021",
+                                      //       style: GoogleFonts.inter(
+                                      //           color: Color(0xFF718096),
+                                      //           fontSize: 13,
+                                      //           fontWeight: FontWeight.w400),
+                                      //     )
                                         ],
                                       ),
-                                    )
+                                    ),
+
                                   ],
                                 ),
                               );
