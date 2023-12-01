@@ -1,7 +1,3 @@
 # video_app
 
-# video_app
-
-
-# home
-<img src="https://drive.google.com/file/d/1v5VcnLdbMkAFwHfSB_qftavcr2NQQNai/view?usp=sharing">
+Drive link [https://drive.google.com/drive/folders/1wnCK1WOkwfYY25bBvuDNTQwZg_7oXZg_?usp=drive_link]
