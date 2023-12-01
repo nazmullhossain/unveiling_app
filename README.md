@@ -5,4 +5,4 @@ Drive link [https://drive.google.com/drive/folders/1wnCK1WOkwfYY25bBvuDNTQwZg_7o
 
 https://github.com/nazmullhossain/qtec_task/blob/main/images/plus.png
 # home
-<img src="https://github.com/nazmullhossain/qtec_task/blob/main/images/plus.png" width="300" height="500">
+<img src="https://github.com/nazmullhossain/qtec_task/blob/main/images/task1.jpeg" width="300" height="500">
