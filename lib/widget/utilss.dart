@@ -7,8 +7,8 @@ class GlobalVariable {
   static const backGroundColor=Colors.white;
   static const backMenuColor=Color(0xFF101010);
   static const Color greyBackgroundColor=Color(0xffebecee);
-  static var selectedNavBarColor=Colors.cyan[800]!;
-  static const unSelectedNavBarColor=Colors.black87;
+  static var selectedNavBarColor=Colors.white;
+  static const unSelectedNavBarColor=Colors.amber;
 
 
   static const appBarGradiant = LinearGradient(

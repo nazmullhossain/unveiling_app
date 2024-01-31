@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "193778733786",
+    "project_id": "ebook-3e038",
+    "storage_bucket": "ebook-3e038.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193778733786:android:9ba91975e9deee6d91cbe3",
+        "android_client_info": {
+          "package_name": "com.example.video_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADgWgmm9CJWv111YpI5K_KqwP8QNNfY7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
