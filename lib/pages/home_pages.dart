@@ -2,16 +2,25 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:url_launcher/url_launcher.dart';
+import 'package:video_app/pages/chapter_pages.dart';
 import 'package:video_app/pages/login_pages.dart';
+import 'package:video_app/pages/stripe_payment_pages.dart';
 import 'package:video_app/widget/drawer_widget.dart';
 
 import '../controller/database_controller.dart';
+import '../controller/theme_controller.dart';
 import '../widget/slider_widget.dart';
 import '../widget/utilss.dart';
+import 'acknowledge_pages.dart';
+import 'content_table_pages.dart';
+import 'intro_pages.dart';
+import 'linear_home_pages.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,23 +39,36 @@ class _HomePageState extends State<HomePage> {
   var _osVersion = "";
   var _deviceName = "";
   var _model = "";
+  bool dark=false;
+  final darkController=Get.put(ThemeController());
   Stream? book;
   DatabaseService databaseService = DatabaseService();
   getBook() async {
     book = await databaseService.getData("book");
     setState(() {});
   }
+  getDark()async{
+    // Obtain shared preferences.
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    dark=(await prefs.getBool("dark"))!;
+    setState(() {
+
+    });
+
+  }
 @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    darkController.getDark();
     getBook();
+
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Color(0xFFF4F4F4),
+      backgroundColor:darkController.isDark==false?Colors.black :Color(0xFFF4F4F4),
       drawer: DrawerWidget(),
       appBar: AppBar(
         iconTheme: const IconThemeData(
@@ -90,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                         //       width: 40,
                         //     ),
                         //     Text(
-                        //       "Unveiling Our Journey",
+                        //       "ourney",
                         //       style: GoogleFonts.poppins(
                         //           textStyle: TextStyle(
                         //               fontWeight: FontWeight.w600,
@@ -142,25 +164,44 @@ class _HomePageState extends State<HomePage> {
                       height: 86,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color:  Colors.white,
+                        color: darkController.isDark==false?Color(0xFF261A02) :Colors.white,
                       ),
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: GlobalVariable.imagesList.length,
                           itemBuilder: (context, index) {
                             final data = GlobalVariable.imagesList[index];
-                            return Container(
-                              child: Column(
-                                children: [
-                                  Image.asset(data["image"]),
-                                  Text(
-                                    data["name"],
-                                    style: GoogleFonts.poppins(
-                                        color: Color(0xff5D646F),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12),
-                                  )
-                                ],
+                            return InkWell(
+                              onTap: (){
+                                if(index==3){
+                                  Navigator.push(context, MaterialPageRoute(builder: (_)=>AcknolodgePage()));
+                                }
+                                if(index==0){
+                                  Navigator.push(context, MaterialPageRoute(builder: (_)=>IntroPage()));
+                                }
+                                if(index==2){
+                                  Navigator.push(context, MaterialPageRoute(builder: (_)=>    ContentTablePage()));
+                                }
+
+
+                                if(index==1){
+                                  Navigator.push(context, MaterialPageRoute(builder: (_)=>StripePaymentPage()));
+                                }
+                              },
+                              child: Container(
+                                // color: darkController.isDark==false?Colors.black.withOpacity(0.5) :Colors.white,
+                                child: Column(
+                                  children: [
+                                    Image.asset(data["image"]),
+                                    Text(
+                                      data["name"],
+                                      style: GoogleFonts.poppins(
+                                          color: Color(0xff5D646F),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    )
+                                  ],
+                                ),
                               ),
                             );
                           }),
@@ -179,6 +220,9 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "Unveiling our journey Book..",
                           style: GoogleFonts.poppins(
+                            
+                            color:darkController.isDark?Colors.black:Colors.white.withOpacity(0.7),
+
                               fontStyle: FontStyle.italic,
 
                               fontSize: 18, fontWeight: FontWeight.w600),
@@ -195,34 +239,36 @@ class _HomePageState extends State<HomePage> {
                                     DocumentSnapshot ds =
                                     snapshot.data.docs[index];
                                     return InkWell(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (_)=>LinearHomePage(img: ds["img"], des: ds["des"],)));
+                                      },
                                       child: Container(
                                         width: 336,
-                                        height: 68,
+                                        height: 150,
                                         padding: EdgeInsets.all(4),
                                         margin: EdgeInsets.all(4),
                                         decoration: BoxDecoration(
-                                          color:  Colors.white,
+                                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white,
                                           borderRadius: BorderRadius.circular(10),
                                         ),
                                         child: ListTile(
                                           leading: Image.asset(
-                                            "images/Frame 69 (2).png",
+                                            "images/ti.png",
                                             height: 46,
                                             width: 46,
                                           ),
                                           title: Text(
                                             "${ds["month"]}",
                                             style: GoogleFonts.poppins(
-                                                color: Colors.red,
+                                                color: darkController.isDark?Colors.black:Colors.white.withOpacity(0.7),
                                                 fontWeight: FontWeight.w500,
                                                 fontSize: 14),
                                           ),
                                           subtitle: Text(
                                             "${ds["month_title"]}",
                                             style: GoogleFonts.inter(
-                                                color:
-                                                    Color(0xFF101010).withOpacity(0.5),
+
+                                                color: darkController.isDark?Colors.black:Colors.white.withOpacity(0.7),
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w400),
                                           ),

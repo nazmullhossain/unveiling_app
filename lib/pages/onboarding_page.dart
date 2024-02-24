@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_app/pages/home_pages.dart';
+import 'package:video_app/pages/splash_pages.dart';
 
 import 'package:video_app/widget/bottom_bar_widget.dart';
 
@@ -34,7 +35,7 @@ class _OnbordingState extends State<Onbording> {
   void _navigateToHome() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => NavigationWidget()),
+      MaterialPageRoute(builder: (context) => SplashScreen()),
     );
   }
   Future<void> _checkFirstLaunch() async {
@@ -56,6 +57,7 @@ class _OnbordingState extends State<Onbording> {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 20,),
           Expanded(
             child: PageView.builder(
               controller: _controller,
@@ -70,7 +72,7 @@ class _OnbordingState extends State<Onbording> {
                   padding: const EdgeInsets.all(25),
                   child: Column(
                     children: [
-                      SvgPicture.asset(
+                      Image.asset(
                         contents[i].image.toString(),
                         height: 200,
                       ),
@@ -86,7 +88,7 @@ class _OnbordingState extends State<Onbording> {
                       SizedBox(height: 10),
                       Text(
                         contents[i].discription.toString(),
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.grey,

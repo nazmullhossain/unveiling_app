@@ -11,6 +11,10 @@ class GlobalVariable {
   static const unSelectedNavBarColor=Colors.amber;
 
 
+  static const darkColor1=Colors.black;
+  static var darkColor2=Colors.black.withOpacity(0.7);
+
+
   static const appBarGradiant = LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
@@ -25,14 +29,17 @@ class GlobalVariable {
         0.5
       ]);
 
+
+
+
  static List <Map<String,dynamic>> imagesList=[
     {
       "image": "images/Frame 22.png",
-      "name":"Last"
+      "name":"Intro"
     },
     {
       "image": "images/Frame 22 (1).png",
-      "name":"Go to"
+      "name":"Pay"
     },
     {
       "image": "images/Frame 22 (2).png",
@@ -40,7 +47,7 @@ class GlobalVariable {
     },
     {
       "image": "images/Frame 22 (3).png",
-      "name":"About"
+      "name":"Acknow.."
     },
   ];
  static List <Map<String,dynamic>> bookList=[

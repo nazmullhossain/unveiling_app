@@ -1,8 +1,14 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:video_app/controller/theme_controller.dart';
 import 'package:video_app/pages/add_new_pages.dart';
 import 'package:video_app/pages/chapter_pages.dart';
 import 'package:video_app/pages/home_pages.dart';
+import 'package:video_app/pages/review_pages.dart';
+
+import 'add_slider_pages.dart';
+import 'content_table_pages.dart';
 
 class NavigationWidget extends StatefulWidget {
   const NavigationWidget({super.key});
@@ -13,18 +19,24 @@ class NavigationWidget extends StatefulWidget {
 
 class _NavigationWidgetState extends State<NavigationWidget> {
   int index=1;
+  final darkController=Get.put(ThemeController());
   final items=<Widget>[
+
     Icon(Icons.book,size: 30,),
     Icon(Icons.home,size: 30,),
+    Icon(Icons.reviews,size: 30,),
 
-    Icon(Icons.favorite,size: 30,),
+
 
   ];
   final sceren=[
-
     ChapterPage(),
+
+    // AddNewPage(),
     HomePage(),
-    AddNewPage(),
+    ReviewPage(),
+    // AddNewPage()
+
 
   ];
   @override
@@ -37,12 +49,12 @@ class _NavigationWidgetState extends State<NavigationWidget> {
 
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
-
+backgroundColor: Colors.transparent,
             iconTheme: IconThemeData(color: Colors.white)
           ),
           child: CurvedNavigationBar(
             color: Color(0xff48043F),
-            buttonBackgroundColor: Colors.grey,
+            buttonBackgroundColor: darkController.isDark==false?Colors.purple.withOpacity(0.8) :Colors.grey,
             backgroundColor: Colors.transparent,
             height: 60,
             items: items,

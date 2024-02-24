@@ -23,8 +23,12 @@ class NetworkManagerWidget extends GetxController{
   Future<void>_updateConectionState(ConnectivityResult result)async{
     _connectivitStatus.value=result;
     if(_connectivitStatus.value==ConnectivityResult.none){
-      LoaderWidget.warningSnackBar(title: "No internet Connection");
+      LoaderWidget.warningSnackBar(title: "Offline");
+    }else{
+      LoaderWidget.warningSnackBar(title: "Online");
     }
+
+
   }
 Future<bool>isConnected()async{
     try{

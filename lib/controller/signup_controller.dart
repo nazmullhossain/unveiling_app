@@ -45,7 +45,8 @@ class SignUpController extends GetxController {
       String userName,
       String lastName,
       String firstName,
-      String password
+      String password,
+
 
       ) async {
     try {
@@ -85,6 +86,8 @@ class SignUpController extends GetxController {
           lastName: lastName,
           firstName: firstName,
           id: userCradiatial.user!.uid,
+        monthTime: DateTime.now(),
+          yearTime: DateTime.now(),
           ispayment: false,
           profilePic: "");
       await authReposityConroller.saveUserRecord(newUser);

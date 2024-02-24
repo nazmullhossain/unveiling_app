@@ -23,11 +23,11 @@ class CheckBoxWidget extends StatelessWidget {
           ),
         ),
         SizedBox(width: 5,),
-        Text.rich(
+        const Text.rich(
           TextSpan(
             children: [
               TextSpan(
-                  text: "Are you agree.."
+                  text: "Do you agree with our terms & policy?"
               ),
 
             ]
