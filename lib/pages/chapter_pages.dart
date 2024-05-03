@@ -30,7 +30,7 @@ class ChapterPage extends StatefulWidget {
 
 class _ChapterPageState extends State<ChapterPage> {
   DatabaseService databaseService = DatabaseService();
-  final darkController=Get.put(ThemeController());
+  final darkController = Get.put(ThemeController());
   // Timer? _timer;
   // int _timeoutDuration = 5;
   // void _startTimer() async{
@@ -96,10 +96,12 @@ class _ChapterPageState extends State<ChapterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:darkController.isDark==false?Colors.black.withOpacity(0.5) :Color(0xFFF4F4F4),
+      backgroundColor: darkController.isDark == false
+          ? Colors.black.withOpacity(0.5)
+          : Color(0xFFF4F4F4),
       // backgroundColor:darkController.isDark==false?Colors.transparent :Colors.white,
       appBar: AppBar(
-        backgroundColor:  Color(0xff48043F),
+        backgroundColor: Color(0xff48043F),
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
@@ -124,7 +126,6 @@ class _ChapterPageState extends State<ChapterPage> {
               )
             : SingleChildScrollView(
                 child: Container(
-
                 decoration: BoxDecoration(
                   // image: DecorationImage(image: AssetImage("images/ti.png")),
                   color: Color(0xff48043F),
@@ -180,124 +181,157 @@ class _ChapterPageState extends State<ChapterPage> {
                     Container(
                       height: MediaQuery.of(context).size.height * 0.9,
                       decoration: BoxDecoration(
-                          color: darkController.isDark==false?Colors.black.withOpacity(0.8) :Color(0xFFF4F4F4),
+                          color: darkController.isDark == false
+                              ? Colors.black.withOpacity(0.8)
+                              : Color(0xFFF4F4F4),
                           // image: DecorationImage(image: AssetImage("images/ti.png")),
-                          borderRadius: BorderRadius.circular(20)
-                      ),
+                          borderRadius: BorderRadius.circular(20)),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: SingleChildScrollView(
-                          child: Column(
-                            children: [
-                              StreamBuilder(
-                                  stream: book,
-                                  builder: (context, AsyncSnapshot snapshot) {
-                                    return snapshot.hasData
-                                        ? SizedBox(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.8,
-                                            child: ListView.builder(
-                                                // scrollDirection: Axis.vertical,
-                                                itemCount:
-                                                    snapshot.data.docs.length,
-                                                itemBuilder: (context, index) {
-                                                  DocumentSnapshot ds =
-                                                      snapshot.data.docs[index];
-                                                  // print("dataaaaa${ds.id}");
-                                                  return Container(
-                                                    width: double.infinity,
-                                                    height: 150,
-                                                    alignment: Alignment.center,
+                        child: Column(
+                          children: [
+                            StreamBuilder(
+                                stream: book,
+                                builder: (context, AsyncSnapshot snapshot) {
+                                  return snapshot.hasData
+                                      ? SizedBox(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.8,
+                                          child: ListView.builder(
+                                              // scrollDirection: Axis.vertical,
+                                              itemCount:
+                                                  snapshot.data.docs.length,
+                                              itemBuilder: (context, index) {
+                                                DocumentSnapshot ds =
+                                                    snapshot.data.docs[index];
+                                                // print("dataaaaa${ds.id}");
+                                                return Container(
+                                                  width: double.infinity,
+                                                  height: 150,
+                                                  alignment: Alignment.center,
 
-                                                    margin:
-                                                    // EdgeInsets.all(15),
-                                                        EdgeInsets.only(bottom: 30),
-                                                    decoration: BoxDecoration(
-                                                      color: darkController.isDark==false?Color(0xff48043F) :Colors.white,
-                                                      // image: DecorationImage(image: AssetImage("images/ti.png")),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              10),
-                                                    ),
-                                                    child: StreamBuilder(
-                                                      stream: FirebaseFirestore
-                                                          .instance
-                                                          .collection(
-                                                              'users') // Replace 'your_collection_name' with your actual collection name
-                                                          .where('id',
-                                                              isEqualTo:
-                                                                  "${token}") // Assuming 'uid' is the field name in your documents
-                                                          .snapshots(),
-                                                      builder: (context,
-                                                          AsyncSnapshot<
-                                                                  QuerySnapshot>
-                                                              snapshot) {
-                                                        if (snapshot
-                                                                .connectionState ==
-                                                            ConnectionState
-                                                                .waiting) {
-                                                          return Center(
-                                                            child:
-                                                                CircularProgressIndicator(),
-                                                          );
-                                                        }
-                          
-                                                        if (snapshot.hasError) {
-                                                          return Center(
-                                                            child: Text(
-                                                                'Error: ${snapshot.error}'),
-                                                          );
-                                                        }
-                          
-                                                        if (snapshot.data ==
-                                                                null ||
-                                                            snapshot.data!.docs
-                                                                .isEmpty) {
-                                                          return Center(
-                                                            child: Text(
-                                                                'Please first login'),
-                                                          );
-                                                        }
-                          
-                                                        return ListView(
-                                                          scrollDirection: Axis.vertical,
+                                                  margin:
+                                                      // EdgeInsets.all(15),
+                                                      EdgeInsets.only(
+                                                          bottom: 20),
+                                                  decoration: BoxDecoration(
+                                                    color: darkController
+                                                                .isDark ==
+                                                            false
+                                                        ? Color(0xff48043F)
+                                                        : Colors.white,
+                                                    // image: DecorationImage(image: AssetImage("images/ti.png")),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                  child: StreamBuilder(
+                                                    stream: FirebaseFirestore
+                                                        .instance
+                                                        .collection(
+                                                            'users') // Replace 'your_collection_name' with your actual collection name
+                                                        .where('id',
+                                                            isEqualTo:
+                                                                "${token}") // Assuming 'uid' is the field name in your documents
+                                                        .snapshots(),
+                                                    builder: (context,
+                                                        AsyncSnapshot<
+                                                                QuerySnapshot>
+                                                            snapshot) {
+                                                      if (snapshot
+                                                              .connectionState ==
+                                                          ConnectionState
+                                                              .waiting) {
+                                                        return Center(
+                                                          child:
+                                                              CircularProgressIndicator(),
+                                                        );
+                                                      }
 
-                                                          children: snapshot
-                                                              .data!.docs
-                                                              .map((doc) {
-                                                            // Assuming your documents have a 'title' field
-                                                            bool title = doc['ispayment'];
-                                                            DateTime monthly = doc['monthTime'].toDate();
-                                                            DateTime year = doc['yearTime'].toDate();
-                                                            DateTime date1 = DateTime.now();
-                                                            int differenceInMonth = date1.difference(monthly).inDays;
-                                                            int differenceInYear = year.difference(date1).inDays;
-                                                            return ListTile(
+                                                      if (snapshot.hasError) {
+                                                        return Center(
+                                                          child: Text(
+                                                              'Error: ${snapshot.error}'),
+                                                        );
+                                                      }
 
-                                                              onTap: ()async {
-                                                                print(
-                                                                    "dfjkssssssssssss${differenceInMonth}");
-                                                                if (token
-                                                                    .isEmpty) {
-                                                                  Navigator.push(
-                                                                      context,
-                                                                      MaterialPageRoute(
-                                                                          builder:
-                                                                              (_) =>
-                                                                                  LoginPage()));
-                                                                }
-                                                                if (title ==
-                                                                    false) {
+                                                      if (snapshot.data ==
+                                                              null ||
+                                                          snapshot.data!.docs
+                                                              .isEmpty) {
+                                                        return Center(
+                                                          child: Text(
+                                                              'Please first login'),
+                                                        );
+                                                      }
+
+                                                      return Column(
+
+                                                        children: snapshot
+                                                            .data!.docs
+                                                            .map((doc) {
+                                                          // Assuming your documents have a 'title' field
+                                                          bool title = doc['ispayment'];
+                                                          DateTime monthly = doc['monthTime'].toDate();
+                                                          DateTime year = doc['yearTime'].toDate();
+                                                          DateTime date1 = DateTime.now();
+                                                          int differenceInMonth = date1.difference(monthly).inDays;
+                                                          int differenceInYear = year.difference(date1).inDays;
+                                                          return
+
+
+                                                            ListTile(
+                                                            onTap: () async {
+                                                              print(
+                                                                  "dfjkssssssssssss${differenceInMonth}");
+                                                              if (token
+                                                                  .isEmpty) {
+                                                                Navigator.push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                        builder: (_) =>
+                                                                            LoginPage()));
+                                                              }
+                                                              if (title ==
+                                                                  false) {
+                                                                Fluttertoast.showToast(
+                                                                    msg:
+                                                                        "Your need a payment",
+                                                                    toastLength:
+                                                                        Toast
+                                                                            .LENGTH_LONG,
+                                                                    gravity: ToastGravity
+                                                                        .BOTTOM,
+                                                                    timeInSecForIosWeb:
+                                                                        1,
+                                                                    backgroundColor:
+                                                                        Colors
+                                                                            .red,
+                                                                    textColor:
+                                                                        Colors
+                                                                            .white,
+                                                                    fontSize:
+                                                                        16.0);
+                                                                Navigator.push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                        builder: (_) =>
+                                                                            StripePaymentPage()));
+                                                              } else if (title ==
+                                                                  true) {
+                                                                if (differenceInYear >
+                                                                    365) {
                                                                   Fluttertoast.showToast(
                                                                       msg:
-                                                                          "Your need a payment",
+                                                                          "Your year payment is expired",
                                                                       toastLength:
                                                                           Toast
                                                                               .LENGTH_LONG,
-                                                                      gravity: ToastGravity
-                                                                          .BOTTOM,
+                                                                      gravity:
+                                                                          ToastGravity
+                                                                              .BOTTOM,
                                                                       timeInSecForIosWeb:
                                                                           1,
                                                                       backgroundColor:
@@ -308,149 +342,157 @@ class _ChapterPageState extends State<ChapterPage> {
                                                                               .white,
                                                                       fontSize:
                                                                           16.0);
-                                                                  Navigator.push(
-                                                                      context,
-                                                                      MaterialPageRoute(
-                                                                          builder:
-                                                                              (_) =>
-                                                                                  StripePaymentPage()));
+                                                                  Map<String,
+                                                                          dynamic>
+                                                                      data = {
+                                                                    "ispayment":
+                                                                        false,
+                                                                  };
+                                                                  await controller
+                                                                      .updateEm(
+                                                                          "${token}",
+                                                                          data);
                                                                 }
-
-
-
-                                                                else if (title ==
-                                                                    true) {
-                                                                 if(differenceInYear >365){
+                                                                if (differenceInMonth >
+                                                                        30 && differenceInYear>365 ) {
                                                                   Fluttertoast.showToast(
                                                                       msg:
-                                                                      "Your year payment is expired",
+                                                                          "Your month payment is expired",
                                                                       toastLength:
-                                                                      Toast
-                                                                          .LENGTH_LONG,
-                                                                      gravity: ToastGravity
-                                                                          .BOTTOM,
+                                                                          Toast
+                                                                              .LENGTH_SHORT,
+                                                                      gravity:
+                                                                          ToastGravity
+                                                                              .BOTTOM,
                                                                       timeInSecForIosWeb:
-                                                                      1,
+                                                                          1,
                                                                       backgroundColor:
-                                                                      Colors
-                                                                          .red,
+                                                                          Colors
+                                                                              .red,
                                                                       textColor:
-                                                                      Colors
-                                                                          .white,
+                                                                          Colors
+                                                                              .white,
                                                                       fontSize:
-                                                                      16.0);
-                                                                  Map<String, dynamic> data = {
-                                                                    "ispayment": false,
-
+                                                                          16.0);
+                                                                  Map<String,
+                                                                          dynamic>
+                                                                      data = {
+                                                                    "ispayment":
+                                                                        false,
                                                                   };
-                                                                  await controller.updateEm("${token}", data);
+                                                                  await controller
+                                                                      .updateEm(
+                                                                          "${token}",
+                                                                          data);
                                                                 }
-                                                                 if(differenceInMonth>30 && differenceInYear <365){
-                                                                   Fluttertoast.showToast(
-                                                                       msg:
-                                                                       "Your month payment is expired",
-                                                                       toastLength:
-                                                                       Toast
-                                                                           .LENGTH_SHORT,
-                                                                       gravity: ToastGravity
-                                                                           .BOTTOM,
-                                                                       timeInSecForIosWeb:
-                                                                       1,
-                                                                       backgroundColor:
-                                                                       Colors
-                                                                           .red,
-                                                                       textColor:
-                                                                       Colors
-                                                                           .white,
-                                                                       fontSize:
-                                                                       16.0);
-                                                                   Map<String, dynamic> data = {
-                                                                     "ispayment": false,
-
-                                                                   };
-                                                                   await controller.updateEm("${token}", data);
-                                                                 }
-                                                                  Navigator.push(
-                                                                      context,
-                                                                      MaterialPageRoute(
-                                                                          builder: (_) =>
-                                                                              DeatilsPage(
-                                                                                weak1: '${ds["weak1"]}',
-                                                                                day1: '${ds["day1"]}',
-                                                                                day2: '${ds["day2"]}',
-                                                                                day3: '${ds["day3"]}',
-                                                                                day4: '${ds["day4"]}',
-                                                                                day5: '${ds["day5"]}',
-                                                                                day6: '${ds["day6"]}',
-                                                                                day7: '${ds["day7"]}',
-                                                                                day8: '${ds["day8"]}',
-                                                                                day9: '${ds["day9"]}',
-                                                                                day10: '${ds["day10"]}',
-                                                                                day11: '${ds["day11"]}',
-                                                                                day12: '${ds["day12"]}',
-                                                                                day13: '${ds["day13"]}',
-                                                                                day14: '${ds["day14"]}',
-                                                                                day15: '${ds["day15"]}',
-                                                                                day16: '${ds["day16"]}',
-                                                                                day17: '${ds["day17"]}',
-                                                                                day18: '${ds["day18"]}',
-                                                                                day19: '${ds["day19"]}',
-                                                                                day20: '${ds["day20"]}',
-                                                                                day21: '${ds["day21"]}',
-                                                                                day22: '${ds["day22"]}',
-                                                                                day23: '${ds["day23"]}',
-                                                                                day24: '${ds["day24"]}',
-                                                                                day25: '${ds["day25"]}',
-                                                                                day26: '${ds["day26"]}',
-                                                                                day27: '${ds["day27"]}',
-                                                                                day28: '${ds["day28"]}',
-                                                                                day29: '${ds["day29"]}',
-                                                                                day30: '${ds["day30"]}',
-                                                                                weak2: '${ds["weak2"]}',
-                                                                                weak3: '${ds["weak3"]}',
-                                                                                weak4: '${ds["weak4"]}',
-                                                                              )));
-                                                                }
-                                                              },
-
-                                                              leading: Image.asset("images/ti.png"),
-                                                              subtitle: Text(textAlign: TextAlign.center,
-                                                                  "${ds["month_title"]}",style: TextStyle(
-                                                                color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)
-                                                              ),),
-                                                              title: Text(textAlign: TextAlign.center,
-                                                                  "${ds["month"]}",style: TextStyle(
-                                                                color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)
-                                                              ),),
-                                                              trailing: title ==
-                                                                      false
-                                                                  ? Icon(
-                                                                      CupertinoIcons
-                                                                          .lock,color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8),)
-                                                                  : Icon(CupertinoIcons
-                                                                      .lock_open,color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8),),
-                                                            );
-                                                            // You can add more widgets to display other fields of the document
-                                                          }).toList(),
-                                                        );
-                                                      },
-                                                    ),
-                                                    // Text(
-                                                    //   "Unveiling Our Journey",
-                                                    //   style: GoogleFonts.poppins(
-                                                    //       color: Color(0xFF5D646F),
-                                                    //       fontSize: 14,
-                                                    //       fontWeight: FontWeight.w500),
-                                                    // ),
-                                                  );
-                                                }),
-                                          )
-                                        : Center(
-                                            child: CircularProgressIndicator(),
-                                          );
-                                  })
-                            ],
-                          ),
+                                                                Navigator.push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                        builder: (_) => DeatilsPage(
+                                                                              weak1: '${ds["weak1"]}',
+                                                                              day1: '${ds["day1"]}',
+                                                                              day2: '${ds["day2"]}',
+                                                                              day3: '${ds["day3"]}',
+                                                                              day4: '${ds["day4"]}',
+                                                                              day5: '${ds["day5"]}',
+                                                                              day6: '${ds["day6"]}',
+                                                                              day7: '${ds["day7"]}',
+                                                                              day8: '${ds["day8"]}',
+                                                                              day9: '${ds["day9"]}',
+                                                                              day10: '${ds["day10"]}',
+                                                                              day11: '${ds["day11"]}',
+                                                                              day12: '${ds["day12"]}',
+                                                                              day13: '${ds["day13"]}',
+                                                                              day14: '${ds["day14"]}',
+                                                                              day15: '${ds["day15"]}',
+                                                                              day16: '${ds["day16"]}',
+                                                                              day17: '${ds["day17"]}',
+                                                                              day18: '${ds["day18"]}',
+                                                                              day19: '${ds["day19"]}',
+                                                                              day20: '${ds["day20"]}',
+                                                                              day21: '${ds["day21"]}',
+                                                                              day22: '${ds["day22"]}',
+                                                                              day23: '${ds["day23"]}',
+                                                                              day24: '${ds["day24"]}',
+                                                                              day25: '${ds["day25"]}',
+                                                                              day26: '${ds["day26"]}',
+                                                                              day27: '${ds["day27"]}',
+                                                                              day28: '${ds["day28"]}',
+                                                                              day29: '${ds["day29"]}',
+                                                                              day30: '${ds["day30"]}',
+                                                                              weak2: '${ds["weak2"]}',
+                                                                              weak3: '${ds["weak3"]}',
+                                                                              weak4: '${ds["weak4"]}',
+                                                                            )));
+                                                              }
+                                                            },
+                                                            leading: Image.asset(
+                                                                "images/ti.png"),
+                                                            subtitle: Text(
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              "${ds["month_title"]}",
+                                                              style: TextStyle(
+                                                                  color: darkController.isDark ==
+                                                                          false
+                                                                      ? Color(
+                                                                          0xFFF4F4F4)
+                                                                      : Colors
+                                                                          .black
+                                                                          .withOpacity(0.8)),
+                                                            ),
+                                                            title: Text(
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              "${ds["month"]}",
+                                                              style: TextStyle(
+                                                                  color: darkController.isDark ==
+                                                                          false
+                                                                      ? Color(
+                                                                          0xFFF4F4F4)
+                                                                      : Colors
+                                                                          .black
+                                                                          .withOpacity(0.8)),
+                                                            ),
+                                                            trailing:
+                                                                title == false
+                                                                    ? Icon(
+                                                                        CupertinoIcons
+                                                                            .lock,
+                                                                        color: darkController.isDark == false
+                                                                            ? Color(0xFFF4F4F4)
+                                                                            : Colors.black.withOpacity(0.8),
+                                                                      )
+                                                                    : Icon(
+                                                                        CupertinoIcons
+                                                                            .lock_open,
+                                                                        color: darkController.isDark == false
+                                                                            ? Color(0xFFF4F4F4)
+                                                                            : Colors.black.withOpacity(0.8),
+                                                                      ),
+                                                          );
+                                                          // You can add more widgets to display other fields of the document
+                                                        }).toList(),
+                                                      );
+                                                    },
+                                                  ),
+                                                  // Text(
+                                                  //   "Unveiling Our Journey",
+                                                  //   style: GoogleFonts.poppins(
+                                                  //       color: Color(0xFF5D646F),
+                                                  //       fontSize: 14,
+                                                  //       fontWeight: FontWeight.w500),
+                                                  // ),
+                                                );
+                                              }),
+                                        )
+                                      : Center(
+                                          child: CircularProgressIndicator(),
+                                        );
+                                })
+                          ],
                         ),
                       ),
                     )

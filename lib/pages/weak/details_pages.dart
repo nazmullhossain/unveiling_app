@@ -278,9 +278,11 @@ class DeatilsPage extends StatelessWidget {
                                     : Colors.black.withOpacity(0.8)),
                           )),
                     ),
+
                   ],
                 ),
-              )
+              ),
+
             ],
           ),
         ),

@@ -81,9 +81,8 @@ class _LinearDayPageState extends State<LinearDayPage> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 50,
-              )
+
+
             ],
           ),
         ),

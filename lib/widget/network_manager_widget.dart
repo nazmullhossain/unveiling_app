@@ -10,8 +10,8 @@ class NetworkManagerWidget extends GetxController{
 
 
   final Connectivity _connectivity=Connectivity();
-  late StreamSubscription<ConnectivityResult>_connectivitySubscription;
-  final Rx<ConnectivityResult> _connectivitStatus=ConnectivityResult.none.obs;
+  late StreamSubscription<List<ConnectivityResult>>_connectivitySubscription;
+ RxList<ConnectivityResult> _connectionStatus = [ConnectivityResult.none].obs;
 
   @override
   void onInit() {
@@ -20,9 +20,9 @@ class NetworkManagerWidget extends GetxController{
     _connectivitySubscription=_connectivity.onConnectivityChanged
     .listen( _updateConectionState);
   }
-  Future<void>_updateConectionState(ConnectivityResult result)async{
-    _connectivitStatus.value=result;
-    if(_connectivitStatus.value==ConnectivityResult.none){
+  Future<void>_updateConectionState(List<ConnectivityResult> result)async{
+    _connectionStatus.value=result;
+    if(_connectionStatus.value==ConnectivityResult.none){
       LoaderWidget.warningSnackBar(title: "Offline");
     }else{
       LoaderWidget.warningSnackBar(title: "Online");

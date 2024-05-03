@@ -1,4 +1,4 @@
-package com.example.video_app
+package com.example.unveiling
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity

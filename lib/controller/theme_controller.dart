@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeController extends GetxController{
 
-  bool _isDark=false;
+  bool _isDark=true;
   bool get isDark=>_isDark;
 
   changeTheme()async{
@@ -17,7 +17,7 @@ class ThemeController extends GetxController{
   getDark()async{
     // Obtain shared preferences.
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    _isDark=await prefs.getBool("dark")??false;
+    _isDark=await prefs.getBool("dark")??true;
  update();
   }
   @override

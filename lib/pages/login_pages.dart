@@ -23,6 +23,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _email=TextEditingController();
   TextEditingController _password=TextEditingController();
+  bool _isLoggingIn = false;
   @override
   void dispose() {
     // TODO: implement dispose
@@ -98,14 +99,23 @@ class _LoginPageState extends State<LoginPage> {
                       backgroundColor: Color(0xff48043F),
                       padding: EdgeInsets.symmetric(horizontal: 100),
                     ),
-                    onPressed: (){
+                    onPressed: ()async{
                       if(_email.text.isNotEmpty && _password.text.isNotEmpty){
+                        setState(() {
+                          _isLoggingIn = true;
+                        });
+                        await Future.delayed(Duration(seconds: 3)); // Simulate a 3-second delay
                         _signIn();
+
+                        setState(() {
+                          _isLoggingIn = false;
+                        });
+
                       }else{
                         LoaderWidget.warningSnackBar(title: "Required*", message: "Please enter all field");
                       }
 
-                }, child: Text("Login ",style: TextStyle(color: Colors.white),)),
+                }, child:_isLoggingIn?Center(child: CircularProgressIndicator(color: Colors.white,),): Text("Login ",style: TextStyle(color: Colors.white),)),
                 SizedBox(height: 8,),
                 GestureDetector(
                   onTap: (){
