@@ -37,7 +37,7 @@ class AboutAuthorPage extends StatelessWidget {
                   child: Image.asset("images/au.png")),
               SizedBox(height: 20,),
 
-
+//text
               Text(
                 "Terri C. Colon, author of “Unveiling our Journey: A Family’s Guide to Leaving a Legacy,” is a woman of passion, purpose, and profound insight. Her remarkable journal is more than just a book; it is a call to action, a guide for leaving a legacy, and a celebration of the family. Through her own experiences and deep understanding of the value of knowledge and preserving traditions, Terri invites families to embark on a transformative journey. With each page, she empowers families to strengthen bonds, ignite conversations, and leave a lasting legacy that will inspire future generations. Join Terri C. Colon on this powerful journey of self-discovery and the power of your own story in ‘Unveiling Our Journey.",
                 style: TextStyle(
