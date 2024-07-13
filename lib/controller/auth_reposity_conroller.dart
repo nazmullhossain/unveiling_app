@@ -12,7 +12,7 @@ class AuthReposityConroller extends GetxController{
   final _auth=FirebaseAuth.instance;
   final FirebaseFirestore _db=FirebaseFirestore.instance;
   
-  
+  //register
   Future<UserCredential>registerWithEmailAndPassword(String email,String password)async{
     try{
       return await _auth.createUserWithEmailAndPassword(email: email, password: password);
