@@ -5,7 +5,7 @@ class UnbordingContent {
 
   UnbordingContent({this.image, this.title, this.discription});
 }
-
+//model
 List<UnbordingContent> contents = [
   UnbordingContent(
       title: 'Unveiling Our Journey',
