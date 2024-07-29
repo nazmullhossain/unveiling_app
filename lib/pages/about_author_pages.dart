@@ -173,6 +173,14 @@ class AboutAuthorPage extends StatelessWidget {
                         size: 40,
                         color: Colors.blue,
                       )),
+                     // CircleAvatar(
+                     //  radius: 30.0,
+                     //  backgroundColor: Colors.grey.withOpacity(0.4),
+                     //  child: Icon(
+                     //    Icons.facebook,
+                     //    size: 40,
+                     //    color: Colors.blue,
+                     //  )),
                 ],
               ),
             ],
