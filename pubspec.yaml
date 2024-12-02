@@ -39,21 +39,22 @@ dependencies:
   flutter_stripe:
   google_fonts: ^6.1.0
   cloud_firestore:
-  firebase_core:
-  carousel_slider: ^4.2.1
+  firebase_core: ^3.8.0
+  carousel_slider: ^5.0.0
   get:
   lottie:
   connectivity_plus:
   firebase_auth:
   flutter_svg:
   shared_preferences:
-  url_launcher: ^6.2.4
-  fluttertoast: ^8.2.4
-  curved_navigation_bar: ^1.0.3
-  random_string: ^2.3.1
+  url_launcher:
+  fluttertoast:
+  curved_navigation_bar:
+  random_string:
 
 
-
+dependency_overrides:
+  win32: ^5.5.4
 
 
 dev_dependencies:

@@ -17,7 +17,7 @@ class _SliderScreenState extends State<SliderScreen> {
     {"id": 5, "image_path": 'images/c5.png'},
     {"id": 6, "image_path": 'images/c6.png'},
   ];
-  final CarouselController carouselController = CarouselController();
+  final CarouselSliderController  carouselController = CarouselSliderController ();
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
