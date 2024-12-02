@@ -64,7 +64,7 @@ class _SliderScreenState extends State<SliderScreen> {
                               alignment: Alignment.center,
                               child: Column(
                                 children: [
-                                  Text(textAlign: TextAlign.justify,"${ds["slider"]}", style: GoogleFonts.hind(
+                                  Text(textAlign: TextAlign.justify,"The journey of life is a continuous path of growth, challenges, and discovery, shaped by the choices we make and the experiences we embrace.", style: GoogleFonts.hind(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white),)  ,

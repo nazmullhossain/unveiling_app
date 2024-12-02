@@ -59,7 +59,7 @@ class _Weak2PageState extends State<Weak2Page> {
     final darkController=Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -77,7 +77,7 @@ class _Weak2PageState extends State<Weak2Page> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xff48043F),
+          color:Colors.pink,
           child: Container(
             height: MediaQuery.of(context).size.height * 0.9,
             padding: EdgeInsets.all(15),
@@ -101,7 +101,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color:  darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color:  darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text("${widget.day8}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
                       )),
@@ -120,7 +120,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                          color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day9}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -140,7 +140,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                          color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day10}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -160,7 +160,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                          color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day11}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -182,7 +182,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                          color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day12}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -203,7 +203,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                          color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day13}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -224,7 +224,7 @@ class _Weak2PageState extends State<Weak2Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                          color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day14}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),

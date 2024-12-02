@@ -88,7 +88,7 @@ class DeatilsPage extends StatelessWidget {
     final darkController = Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -150,7 +150,7 @@ class DeatilsPage extends StatelessWidget {
                                 image: AssetImage("images/ti.png")),
                             borderRadius: BorderRadius.circular(10),
                             color: darkController.isDark == false
-                                ? Color(0xff48043F)
+                                ?Colors.pink
                                 : Colors.white,
                           ),
                           child: Text(
@@ -189,7 +189,7 @@ class DeatilsPage extends StatelessWidget {
                             image: DecorationImage(
                                 image: AssetImage("images/ti.png")),
                             color: darkController.isDark == false
-                                ? Color(0xff48043F)
+                                ?Colors.pink
                                 : Colors.white,
                           ),
                           child: Text(
@@ -228,7 +228,7 @@ class DeatilsPage extends StatelessWidget {
                                 image: AssetImage("images/ti.png")),
                             borderRadius: BorderRadius.circular(10),
                             color: darkController.isDark == false
-                                ? Color(0xff48043F)
+                                ?Colors.pink
                                 : Colors.white,
                           ),
                           child: Text(
@@ -267,7 +267,7 @@ class DeatilsPage extends StatelessWidget {
                                 image: AssetImage("images/ti.png")),
                             borderRadius: BorderRadius.circular(10),
                             color: darkController.isDark == false
-                                ? Color(0xff48043F)
+                                ?Colors.pink
                                 : Colors.white,
                           ),
                           child: Text(

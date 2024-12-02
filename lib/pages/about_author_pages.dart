@@ -10,7 +10,7 @@ class AboutAuthorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         // automaticallyImplyLeading: false,
         centerTitle: true,
         iconTheme: IconThemeData(
@@ -39,7 +39,7 @@ class AboutAuthorPage extends StatelessWidget {
 
 //text
               Text(
-                "Terri C. Colon, author of “Unveiling our Journey: A Family’s Guide to Leaving a Legacy,” is a woman of passion, purpose, and profound insight. Her remarkable journal is more than just a book; it is a call to action, a guide for leaving a legacy, and a celebration of the family. Through her own experiences and deep understanding of the value of knowledge and preserving traditions, Terri invites families to embark on a transformative journey. With each page, she empowers families to strengthen bonds, ignite conversations, and leave a lasting legacy that will inspire future generations. Join Terri C. Colon on this powerful journey of self-discovery and the power of your own story in ‘Unveiling Our Journey.",
+                "Terri C. Colon, author of “Journey of our life: A Family’s Guide to Leaving a Legacy,” is a woman of passion, purpose, and profound insight. Her remarkable journal is more than just a book; it is a call to action, a guide for leaving a legacy, and a celebration of the family. Through her own experiences and deep understanding of the value of knowledge and preserving traditions, Terri invites families to embark on a transformative journey. With each page, she empowers families to strengthen bonds, ignite conversations, and leave a lasting legacy that will inspire future generations. Join Terri C. Colon on this powerful journey of self-discovery and the power of your own story in ‘Journey of our life.",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                 ),

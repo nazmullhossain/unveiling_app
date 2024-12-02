@@ -59,7 +59,7 @@ class _Weak3PageState extends State<Weak3Page> {
     final darkController=Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -77,7 +77,7 @@ class _Weak3PageState extends State<Weak3Page> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xff48043F),
+          color:Colors.pink,
           child: Container(
             height: MediaQuery.of(context).size.height * 0.9,
             padding: EdgeInsets.all(15),
@@ -101,7 +101,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text("${widget.day15}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -121,7 +121,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text(textAlign: TextAlign.justify,
                         "${widget.day16}",
@@ -142,7 +142,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text(textAlign: TextAlign.center,
                         "${widget.day17}",
@@ -163,7 +163,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text(
                         "${widget.day18}",
@@ -186,7 +186,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text(
                         "${widget.day19}",
@@ -208,7 +208,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text(
                         "${widget.day20}",
@@ -230,7 +230,7 @@ class _Weak3PageState extends State<Weak3Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white
                       ),
                       child: Text( widget.day21!.isNotEmpty?
                         "${widget.day21}" :"No data",

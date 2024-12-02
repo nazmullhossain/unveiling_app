@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
           size: 40, //change size on your need
           color: Colors.white, //change color on your need
         ),
-        backgroundColor:  Color(0xff48043F),
+        backgroundColor:  Colors.pink,
         // backgroundColor: const Color.fromRGBO(26, 164, 131, 1),
         title: Text("Home",style: TextStyle(color: Colors.white),),
         centerTitle: true,
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.all(15),
                     height: MediaQuery.of(context).size.height * 0.5,
                     decoration: const BoxDecoration(
-                      color:  Color(0xff48043F),
+                      color:  Colors.pink,
                         image: DecorationImage(
                             alignment: Alignment.bottomCenter,
                             image: AssetImage("images/ti.png")),
@@ -218,7 +218,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Unveiling our journey Book..",
+                          "Journey of Our Life Book..",
                           style: GoogleFonts.poppins(
                             
                             color:darkController.isDark?Colors.black:Colors.white.withOpacity(0.7),
@@ -248,7 +248,7 @@ class _HomePageState extends State<HomePage> {
                                         padding: EdgeInsets.all(4),
                                         margin: EdgeInsets.all(4),
                                         decoration: BoxDecoration(
-                                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white,
+                                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white,
                                           borderRadius: BorderRadius.circular(10),
                                         ),
                                         child: ListTile(

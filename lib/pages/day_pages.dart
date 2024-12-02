@@ -59,7 +59,7 @@ class _DayPageState extends State<DayPage> {
     final darkController=Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -78,7 +78,7 @@ class _DayPageState extends State<DayPage> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          color: Color(0xff48043F),
+          color:Colors.pink,
           child: Container(
             height: MediaQuery.of(context).size.height * 0.9,
             padding: EdgeInsets.all(15),
@@ -103,7 +103,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),
                       ),
                       child: Text("${widget.day1}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -124,7 +124,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day2}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -145,7 +145,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day3}",
                         style: TextStyle(color:  darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -166,7 +166,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day4}",
                         style: TextStyle(color:  darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -189,7 +189,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day5}",
                         style: TextStyle(color:  darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -211,7 +211,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day6}",
                         style: TextStyle(color: darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),
@@ -232,7 +232,7 @@ class _DayPageState extends State<DayPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        color: darkController.isDark==false?Color(0xff48043F) :Color(0xFFF4F4F4),),
+                        color: darkController.isDark==false?Color(0xffFFC0CB) :Color(0xFFF4F4F4),),
                       child: Text(
                         "${widget.day7}",
                         style: TextStyle(color:  darkController.isDark==false?Color(0xFFF4F4F4):Colors.black.withOpacity(0.8)),

@@ -20,11 +20,11 @@ class _LinearHomePageState extends State<LinearHomePage> {
         iconTheme: IconThemeData(
           color: Colors.white, //change your color here
         ),
-        backgroundColor:  Color(0xff48043F),
+        backgroundColor: Colors.pink,
         automaticallyImplyLeading: true,
         centerTitle: true,
         title: Text(
-          "Unveiling Our Journey",
+          "Journey of our life",
           style: GoogleFonts.poppins(
               fontSize: 20,
               fontStyle: FontStyle.italic,

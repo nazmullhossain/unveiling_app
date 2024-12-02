@@ -101,11 +101,11 @@ class _ChapterPageState extends State<ChapterPage> {
           : Color(0xFFF4F4F4),
       // backgroundColor:darkController.isDark==false?Colors.transparent :Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor: Colors.pink,
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
-          "Unveiling Our Journey",
+          "Journey of Our Life",
           style: GoogleFonts.poppins(
               fontSize: 20,
               fontStyle: FontStyle.italic,
@@ -128,7 +128,7 @@ class _ChapterPageState extends State<ChapterPage> {
                 child: Container(
                 decoration: BoxDecoration(
                   // image: DecorationImage(image: AssetImage("images/ti.png")),
-                  color: Color(0xff48043F),
+                  color:Colors.pink,
                 ),
                 child: Column(
                   children: [
@@ -150,7 +150,7 @@ class _ChapterPageState extends State<ChapterPage> {
                     //           child: Column(
                     //             children: [
                     //               Text(
-                    //                 "Unveiling Our Journey...",
+                    //                 "Journey of our life...",
                     //                 style: GoogleFonts.poppins(
                     //                     fontSize: 20,
                     //                     fontStyle:FontStyle.italic,
@@ -220,7 +220,7 @@ class _ChapterPageState extends State<ChapterPage> {
                                                     color: darkController
                                                                 .isDark ==
                                                             false
-                                                        ? Color(0xff48043F)
+                                                        ?Colors.pink
                                                         : Colors.white,
                                                     // image: DecorationImage(image: AssetImage("images/ti.png")),
                                                     borderRadius:
@@ -479,7 +479,7 @@ class _ChapterPageState extends State<ChapterPage> {
                                                     },
                                                   ),
                                                   // Text(
-                                                  //   "Unveiling Our Journey",
+                                                  //   "Journey of our life",
                                                   //   style: GoogleFonts.poppins(
                                                   //       color: Color(0xFF5D646F),
                                                   //       fontSize: 14,

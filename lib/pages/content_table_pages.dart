@@ -13,7 +13,7 @@ class ContentTablePage extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.white, //change your color here
         ),
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         centerTitle: true,
         title:   Text(
           "Table of Contents ",
@@ -27,7 +27,7 @@ class ContentTablePage extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          color: Color(0xff48043F),
+          color:Colors.pink,
           child: Container(
             height: MediaQuery.of(context).size.height * 0.9,
             padding: EdgeInsets.all(15),

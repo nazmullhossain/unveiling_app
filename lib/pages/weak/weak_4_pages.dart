@@ -83,7 +83,7 @@ class _Weak4PageState extends State<Weak4Page> {
     final darkController=Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -101,7 +101,7 @@ class _Weak4PageState extends State<Weak4Page> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xff48043F),
+          color:Colors.pink,
           child: Container(
             height: MediaQuery.of(context).size.height * 0.9,
             padding: EdgeInsets.all(15),
@@ -127,7 +127,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day22!.isNotEmpty
@@ -155,7 +155,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day23!.isNotEmpty
@@ -183,7 +183,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day24!.isNotEmpty
@@ -211,7 +211,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day25!.isNotEmpty
@@ -239,7 +239,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day26!.isNotEmpty
@@ -267,7 +267,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day27!.isNotEmpty
@@ -295,7 +295,7 @@ class _Weak4PageState extends State<Weak4Page> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color:  darkController.isDark==false?Color(0xff48043F) :Colors.white),
+                          color:  darkController.isDark==false?Color(0xffFFC0CB) :Colors.white),
                       child: Text(
                         textAlign: TextAlign.center,
                         widget.day28!.isNotEmpty

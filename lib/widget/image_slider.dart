@@ -10,7 +10,7 @@ class SliderScreen extends StatefulWidget {
 
 class _SliderScreenState extends State<SliderScreen> {
   List imageList = [
-    {"id": 1, "image_path": 'images/au.png'},
+
     {"id": 2, "image_path": 'images/c1.png'},
     {"id": 3, "image_path": 'images/c2.png'},
     {"id": 4, "image_path": 'images/c3.png'},

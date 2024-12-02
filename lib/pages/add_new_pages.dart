@@ -55,7 +55,7 @@ class _AddNewPageState extends State<AddNewPage> {
           size: 40, //change size on your need
           color: Colors.white, //change color on your need
         ),
-        backgroundColor:  Color(0xff48043F),
+        backgroundColor: Colors.pink,
         // backgroundColor: const Color.fromRGBO(26, 164, 131, 1),
         title: Text("Add New",style: TextStyle(color: Colors.white),),
         centerTitle: true,
@@ -145,7 +145,7 @@ class _AddNewPageState extends State<AddNewPage> {
 
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff48043F),
+                      backgroundColor:Colors.pink,
                       padding: EdgeInsets.symmetric(horizontal: 100),
                     ),
                     onPressed: (){

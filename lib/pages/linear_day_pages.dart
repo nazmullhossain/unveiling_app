@@ -37,7 +37,7 @@ class _LinearDayPageState extends State<LinearDayPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff48043F),
+        backgroundColor:Colors.pink,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -55,7 +55,7 @@ class _LinearDayPageState extends State<LinearDayPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xff48043F),
+          color:Colors.pink,
           child: Column(
             children: [
               Container(

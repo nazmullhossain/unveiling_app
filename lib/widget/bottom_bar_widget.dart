@@ -46,7 +46,7 @@
 //         height: 63,
 //         margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
 //         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-//         // color: Color(0xff48043F)
+//         // color:Colors.pink
 //         ),
 //         child: ClipRRect(
 //           borderRadius: BorderRadius.circular(10),
@@ -56,11 +56,11 @@
 //             onTap: updatePage,
 //             selectedItemColor: GlobalVariable.selectedNavBarColor,
 //             unselectedItemColor: GlobalVariable.unSelectedNavBarColor,
-//             backgroundColor:Color(0xff48043F),
+//             backgroundColor:Color(0xffFFC0CB),
 //             iconSize: 28,
 //             items: [
 //               BottomNavigationBarItem(
-//                 backgroundColor: Color(0xff48043F),
+//                 backgroundColor:Colors.pink,
 //                   icon: Column(
 //                     children: [
 //                      Image.asset("images/Vector.png",width: 20,height: 20,
@@ -72,13 +72,13 @@
 //
 //                         width: bottomBarWidth,
 //                         decoration: BoxDecoration(
-//                           // color: Color(0xff48043F),
+//                           // color:Colors.pink,
 //
 //                             border: Border(
 //                                 top: BorderSide(
 //                           color: _page == 0
 //                               ? Colors.white
-//                               : Color(0xff48043F),
+//                               :Colors.pink,
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -104,7 +104,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 1
 //                                       ? Colors.white
-//                                       : Color(0xff48043F),
+//                                       :Colors.pink,
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -130,7 +130,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 2
 //                                       ? Colors.white
-//                                       : Color(0xff48043F),
+//                                       :Colors.pink,
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -156,7 +156,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 3
 //                                       ? Colors.white
-//                                       : Color(0xff48043F),
+//                                       :Colors.pink,
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -182,7 +182,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 4
 //                                       ? Colors.white
-//                                       : Color(0xff48043F),
+//                                       :Colors.pink,
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),

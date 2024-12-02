@@ -8,15 +8,15 @@ class UnbordingContent {
 //model
 List<UnbordingContent> contents = [
   UnbordingContent(
-      title: 'Unveiling Our Journey',
+      title: 'Journey of our life',
       image: 'images/ti.png',
-      discription: "Unveiling Our Journey’: A 12-Month Journal for Creating Our Family Legacy \n With Terri Colon’s expert guidance, you’ll delve into the power of capturing cherished memories, aspirations, and the wisdom accumulated along your family’s path. \n Discover how this journal empowers you to build a lasting legacy—one that encompasses faith, unity, and financial well-being.”"
+      discription: "Journey of our life’: A 12-Month Journal for Creating Our Family Legacy \n With Terri Colon’s expert guidance, you’ll delve into the power of capturing cherished memories, aspirations, and the wisdom accumulated along your family’s path. \n Discover how this journal empowers you to build a lasting legacy—one that encompasses faith, unity, and financial well-being.”"
 
   ),
   UnbordingContent(
       title: 'About the Author: Terri Colon',
       image: 'images/au.png',
-      discription: "Terri C. Colon, author of “Unveiling our Journey: A Family’s Guide to Leaving a Legacy,” is a woman of passion, purpose, and profound insight. Her remarkable journal is more than just a book; it is a call to action, a guide for leaving a legacy, and a celebration of the family. Through her own experiences and deep understanding of the value of knowledge and preserving traditions, Terri invites families to embark on a transformative journey. With each page, she empowers families to strengthen bonds, ignite conversations, and leave a lasting legacy that will inspire future generations. Join Terri C. Colon on this powerful journey of self-discovery and the power of your own story in ‘Unveiling Our Journey."
+      discription: "Terri C. Colon, author of “Journey of our life: A Family’s Guide to Leaving a Legacy,” is a woman of passion, purpose, and profound insight. Her remarkable journal is more than just a book; it is a call to action, a guide for leaving a legacy, and a celebration of the family. Through her own experiences and deep understanding of the value of knowledge and preserving traditions, Terri invites families to embark on a transformative journey. With each page, she empowers families to strengthen bonds, ignite conversations, and leave a lasting legacy that will inspire future generations. Join Terri C. Colon on this powerful journey of self-discovery and the power of your own story in ‘Journey of our life."
 
   ),
   UnbordingContent(

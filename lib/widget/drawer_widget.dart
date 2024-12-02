@@ -58,7 +58,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor:dark==false? Color(0xff48043F): Colors.white,
+      backgroundColor:dark==false? Colors.pink: Colors.white,
       child: ListView(
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
@@ -86,12 +86,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      'Unveiling Our Journey',
+                      'Journey of our life',
                       style: TextStyle(
                           fontSize: 25,
-                          color: Color(
-                            0xff48043F,
-                          ),
+                          color: Colors.pink,
                           textBaseline: TextBaseline.alphabetic,
                           fontWeight: FontWeight.bold),
                     ),
@@ -118,57 +116,8 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 )
               : Container(),
 
-          ListTile(
-            dense: true,
 
-            leading: Icon(  dark==false?Icons.dark_mode: Icons.light,size: 30,color: dark==true?Colors.black:Colors.white),
-            title: Text(   dark==false?"Light Theme": 'Change Theme',style: TextStyle(fontSize: 20,color: dark==true?Colors.black:Colors.white)),
 
-            onTap: () {
-              darkController.changeTheme();
-              darkController.getDark();
-
-             Navigator.push(context, MaterialPageRoute(builder: (_)=>NavigationWidget()));
-
-              // launchUrl(Uri.parse(mailing.toString()));
-              // _launchURL(
-              //     'mailto:alatafpharma@gmail.com?subject=Feedback%20to%20Al-Ataf%20Pharma%20(${packageInfo.version})&body=\n\n\nOS Version: $_osVersion \nBrand:$_deviceName \nModel: $_model');
-            },
-          ),
-          ListTile(
-            dense: true,
-            leading: Icon(Icons.web,size: 30,color: dark==true?Colors.black:Colors.white),
-            title: Text('Our Website',style: TextStyle(fontSize: 20,color: dark==true?Colors.black:Colors.white)),
-            onTap: () {
-              Navigator.pop(context);
-
-              launchUrl(Uri.parse("http://unveilingourjourney.com"));
-              // _launchURL(
-              //     'mailto:alatafpharma@gmail.com?subject=Feedback%20to%20Al-Ataf%20Pharma%20(${packageInfo.version})&body=\n\n\nOS Version: $_osVersion \nBrand:$_deviceName \nModel: $_model');
-            },
-          ),
-          ListTile(
-              dense: true,
-              leading: Icon(Icons.web_asset,size: 30,color: dark==true?Colors.black:Colors.white),
-              title: Text('Buy from Amazon',style: TextStyle(fontSize: 20,color: dark==true?Colors.black:Colors.white)),
-              onTap: () {
-                Navigator.pop(context);
-                // Navigator.push(context, MaterialPageRoute(builder: (_)=>WebViewApp()));
-
-                launchUrl(Uri.parse(
-                    "https://www.amazon.com/dp/B0CQ42CP5N?fbclid=IwAR1wf-ix6Br7A0qFFAS9EgIdppDLI0SzRI35qYeD2J4nEPaSHifqqDT9Q5I&nodl=1"));
-              }),
-          ListTile(
-              dense: true,
-              title: Text('Author: Terri Colon',style: TextStyle(fontSize: 20,color: dark==true?Colors.black:Colors.white),),
-              leading: Icon(Icons.person_2,size: 30,color: dark==true?Colors.black:Colors.white),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => AboutAuthorPage()));
-
-                // launchUrl(Uri.parse("https://www.amazon.com/dp/B0CQ42CP5N?fbclid=IwAR1wf-ix6Br7A0qFFAS9EgIdppDLI0SzRI35qYeD2J4nEPaSHifqqDT9Q5I&nodl=1"));
-              }),
 
           // ListTile(
           //   dense: true,
