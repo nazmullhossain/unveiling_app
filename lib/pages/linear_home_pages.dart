@@ -20,7 +20,7 @@ class _LinearHomePageState extends State<LinearHomePage> {
         iconTheme: IconThemeData(
           color: Colors.white, //change your color here
         ),
-        backgroundColor: Colors.pink,
+        backgroundColor: Color(0xff003300),
         automaticallyImplyLeading: true,
         centerTitle: true,
         title: Text(

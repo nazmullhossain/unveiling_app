@@ -41,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
       ),
       body: Center(
         child: StreamBuilder(

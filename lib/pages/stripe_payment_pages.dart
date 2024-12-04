@@ -171,7 +171,7 @@ class _StripePaymentPageState extends State<StripePaymentPage> {
         iconTheme: IconThemeData(
           color: Colors.white, //change your color here
         ),
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
         centerTitle: true,
         title:   Text(
           "Payment",
@@ -183,7 +183,7 @@ class _StripePaymentPageState extends State<StripePaymentPage> {
         ),
       ),
       body: Container(
-        color:Colors.pink,
+        color:Color(0xff003300),
         child: Container(
           padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
@@ -233,7 +233,7 @@ class _StripePaymentPageState extends State<StripePaymentPage> {
                         height: 150,
                         width: 150,
                         decoration: BoxDecoration(
-                          color:Colors.pink,
+                          color:Color(0xff003300),
                           borderRadius: BorderRadius.circular(10),
 
                         ),
@@ -270,7 +270,7 @@ class _StripePaymentPageState extends State<StripePaymentPage> {
                         height: 150,
                         width: 150,
                         decoration: BoxDecoration(
-                          color:Colors.pink,
+                          color:Color(0xff003300),
                           borderRadius: BorderRadius.circular(10),
 
                         ),

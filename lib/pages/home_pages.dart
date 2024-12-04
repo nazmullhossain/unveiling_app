@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
           size: 40, //change size on your need
           color: Colors.white, //change color on your need
         ),
-        backgroundColor:  Colors.pink,
+        backgroundColor:  Color(0xff003300),
         // backgroundColor: const Color.fromRGBO(26, 164, 131, 1),
         title: Text("Home",style: TextStyle(color: Colors.white),),
         centerTitle: true,
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.all(15),
                     height: MediaQuery.of(context).size.height * 0.5,
                     decoration: const BoxDecoration(
-                      color:  Colors.pink,
+                      color:  Color(0xff003300),
                         image: DecorationImage(
                             alignment: Alignment.bottomCenter,
                             image: AssetImage("images/ti.png")),

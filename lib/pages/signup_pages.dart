@@ -38,9 +38,9 @@ final conroller=Get.put(SignUpController());
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // backgroundColor:Colors.pink.withOpacity(0.1),
+      // backgroundColor:Color(0xff003300).withOpacity(0.1),
       appBar: AppBar(
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
         title: Text("SignUp",style: TextStyle(color: Colors.white),),centerTitle: true,),
       body: SingleChildScrollView(
         child: Form(

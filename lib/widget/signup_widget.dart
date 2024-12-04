@@ -180,7 +180,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor:Colors.pink,
+                  backgroundColor:Color(0xff003300),
                   padding: EdgeInsets.symmetric(horizontal: 100),
                 ),
                 onPressed: () async {

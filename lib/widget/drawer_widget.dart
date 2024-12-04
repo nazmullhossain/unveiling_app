@@ -58,7 +58,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor:dark==false? Colors.pink: Colors.white,
+      backgroundColor:dark==false? Color(0xff003300): Colors.white,
       child: ListView(
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
@@ -89,7 +89,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       'Journey of our life',
                       style: TextStyle(
                           fontSize: 25,
-                          color: Colors.pink,
+                          color: Color(0xff003300),
                           textBaseline: TextBaseline.alphabetic,
                           fontWeight: FontWeight.bold),
                     ),

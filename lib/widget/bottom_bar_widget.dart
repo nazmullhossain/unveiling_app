@@ -46,7 +46,7 @@
 //         height: 63,
 //         margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
 //         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-//         // color:Colors.pink
+//         // color:Color(0xff003300)
 //         ),
 //         child: ClipRRect(
 //           borderRadius: BorderRadius.circular(10),
@@ -60,7 +60,7 @@
 //             iconSize: 28,
 //             items: [
 //               BottomNavigationBarItem(
-//                 backgroundColor:Colors.pink,
+//                 backgroundColor:Color(0xff003300),
 //                   icon: Column(
 //                     children: [
 //                      Image.asset("images/Vector.png",width: 20,height: 20,
@@ -72,13 +72,13 @@
 //
 //                         width: bottomBarWidth,
 //                         decoration: BoxDecoration(
-//                           // color:Colors.pink,
+//                           // color:Color(0xff003300),
 //
 //                             border: Border(
 //                                 top: BorderSide(
 //                           color: _page == 0
 //                               ? Colors.white
-//                               :Colors.pink,
+//                               :Color(0xff003300),
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -104,7 +104,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 1
 //                                       ? Colors.white
-//                                       :Colors.pink,
+//                                       :Color(0xff003300),
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -130,7 +130,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 2
 //                                       ? Colors.white
-//                                       :Colors.pink,
+//                                       :Color(0xff003300),
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -156,7 +156,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 3
 //                                       ? Colors.white
-//                                       :Colors.pink,
+//                                       :Color(0xff003300),
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),
@@ -182,7 +182,7 @@
 //                                 top: BorderSide(
 //                                   color: _page == 4
 //                                       ? Colors.white
-//                                       :Colors.pink,
+//                                       :Color(0xff003300),
 //                           width: bottomBarBorderWidth,
 //
 //                         ))),

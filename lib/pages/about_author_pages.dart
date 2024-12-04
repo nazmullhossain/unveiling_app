@@ -10,7 +10,7 @@ class AboutAuthorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
         // automaticallyImplyLeading: false,
         centerTitle: true,
         iconTheme: IconThemeData(

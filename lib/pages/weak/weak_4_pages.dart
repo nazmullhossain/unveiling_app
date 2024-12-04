@@ -83,7 +83,7 @@ class _Weak4PageState extends State<Weak4Page> {
     final darkController=Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(
           //change size on your need
@@ -101,7 +101,7 @@ class _Weak4PageState extends State<Weak4Page> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color:Colors.pink,
+          color:Color(0xff003300),
           child: Container(
             height: MediaQuery.of(context).size.height * 0.9,
             padding: EdgeInsets.all(15),

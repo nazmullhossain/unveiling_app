@@ -54,7 +54,7 @@ class _NavigationWidgetState extends State<NavigationWidget> {
                 // backgroundColor: Colors.transparent,
                 iconTheme: IconThemeData(color: Colors.white)),
             child: CurvedNavigationBar(
-              color: Colors.pink,
+              color: Color(0xff003300),
               buttonBackgroundColor: darkController.isDark == false
                   ? Colors.purple.withOpacity(0.8)
                   : Colors.grey,

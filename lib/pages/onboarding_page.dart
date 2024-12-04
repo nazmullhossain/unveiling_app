@@ -115,7 +115,7 @@ class _OnbordingState extends State<Onbording> {
             // width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink,
+                backgroundColor: Color(0xff003300),
                 padding: EdgeInsets.symmetric(horizontal: 100),
               ),
               child: Text(
@@ -151,7 +151,7 @@ class _OnbordingState extends State<Onbording> {
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.pink,
+        color: Color(0xff003300),
       ),
     );
   }

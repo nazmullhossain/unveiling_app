@@ -12,7 +12,7 @@ class AcknolodgePage extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.white, //change your color here
         ),
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
         centerTitle: true,
         title:   Text(
           "Acknowledgments",
@@ -25,7 +25,7 @@ class AcknolodgePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color:Colors.pink,
+          color:Color(0xff003300),
           child: Container(
             height: 1200,
             padding: EdgeInsets.all(15),

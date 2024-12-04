@@ -8,7 +8,7 @@ class ShowDialog{
     showDialog(context: Get.overlayContext!, builder: (_)=>PopScope(
       canPop: false,
         child: Container(
-          color: Colors.pink,
+          color: Color(0xff003300),
           width: double.infinity,
           height: double.infinity,
           child: Column(

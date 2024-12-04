@@ -17,7 +17,7 @@ void main() async{
   Stripe.publishableKey="pk_live_51OcEtSHJHeEC92YEE743ZaWXGJIj5yCWO0bzvzvUrEn9scFGgy7JHKUqMymry2Nu6uasFIgZFzmALwsWmEtot1t700g0orYkZY";
 
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor:Colors.pink,
+    statusBarColor:Color(0xff003300),
   ));
   runApp( MyApp());
 }

@@ -101,7 +101,7 @@ class _ChapterPageState extends State<ChapterPage> {
           : Color(0xFFF4F4F4),
       // backgroundColor:darkController.isDark==false?Colors.transparent :Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.pink,
+        backgroundColor: Color(0xff003300),
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
@@ -128,7 +128,7 @@ class _ChapterPageState extends State<ChapterPage> {
                 child: Container(
                 decoration: BoxDecoration(
                   // image: DecorationImage(image: AssetImage("images/ti.png")),
-                  color:Colors.pink,
+                  color:Color(0xff003300),
                 ),
                 child: Column(
                   children: [
@@ -220,7 +220,7 @@ class _ChapterPageState extends State<ChapterPage> {
                                                     color: darkController
                                                                 .isDark ==
                                                             false
-                                                        ?Colors.pink
+                                                        ?Color(0xff003300)
                                                         : Colors.white,
                                                     // image: DecorationImage(image: AssetImage("images/ti.png")),
                                                     borderRadius:

@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor:Colors.white,
       appBar: AppBar(
-        backgroundColor:Colors.pink,
+        backgroundColor:Color(0xff003300),
         title: Text("SignIn",style: TextStyle(color: Colors.white),),
         centerTitle: true,
 
@@ -96,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 10,),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor:Colors.pink,
+                      backgroundColor:Color(0xff003300),
                       padding: EdgeInsets.symmetric(horizontal: 100),
                     ),
                     onPressed: ()async{
