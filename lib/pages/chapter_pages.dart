@@ -274,6 +274,7 @@ class _ChapterPageState extends State<ChapterPage> {
                                                             .map((doc) {
                                                           // Assuming your documents have a 'title' field
                                                           bool title = doc['ispayment'];
+                                                          print("is payment ${title}");
                                                           DateTime monthly = doc['monthTime'].toDate();
                                                           DateTime year = doc['yearTime'].toDate();
                                                           DateTime date1 = DateTime.now();
@@ -456,22 +457,22 @@ class _ChapterPageState extends State<ChapterPage> {
                                                                           .black
                                                                           .withOpacity(0.8)),
                                                             ),
-                                                            trailing:
-                                                                title == false
-                                                                    ? Icon(
-                                                                        CupertinoIcons
-                                                                            .lock,
-                                                                        color: darkController.isDark == false
-                                                                            ? Color(0xFFF4F4F4)
-                                                                            : Colors.black.withOpacity(0.8),
-                                                                      )
-                                                                    : Icon(
-                                                                        CupertinoIcons
-                                                                            .lock_open,
-                                                                        color: darkController.isDark == false
-                                                                            ? Color(0xFFF4F4F4)
-                                                                            : Colors.black.withOpacity(0.8),
-                                                                      ),
+                                                            // trailing:
+                                                            //     title == false
+                                                            //         ? Icon(
+                                                            //             CupertinoIcons
+                                                            //                 .lock,
+                                                            //             color: darkController.isDark == false
+                                                            //                 ? Color(0xFFF4F4F4)
+                                                            //                 : Colors.black.withOpacity(0.8),
+                                                            //           )
+                                                            //         : Icon(
+                                                            //             CupertinoIcons
+                                                            //                 .lock_open,
+                                                            //             color: darkController.isDark == false
+                                                            //                 ? Color(0xFFF4F4F4)
+                                                            //                 : Colors.black.withOpacity(0.8),
+                                                            //           ),
                                                           );
                                                           // You can add more widgets to display other fields of the document
                                                         }).toList(),

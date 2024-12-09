@@ -37,10 +37,10 @@ class GlobalVariable {
       "image": "images/Frame 22.png",
       "name":"Intro"
     },
-    {
-      "image": "images/Frame 22 (1).png",
-      "name":"Pay"
-    },
+    // {
+    //   "image": "images/Frame 22 (1).png",
+    //   "name":"Pay"
+    // },
     {
       "image": "images/Frame 22 (2).png",
       "name":"Books"

@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                           height: 50,
                         ),
                         Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage(
                                         "images/image 3 (Traced).png"))),
@@ -173,34 +173,36 @@ class _HomePageState extends State<HomePage> {
                             final data = GlobalVariable.imagesList[index];
                             return InkWell(
                               onTap: (){
-                                if(index==3){
+                                if(index==2){
                                   Navigator.push(context, MaterialPageRoute(builder: (_)=>AcknolodgePage()));
                                 }
                                 if(index==0){
                                   Navigator.push(context, MaterialPageRoute(builder: (_)=>IntroPage()));
                                 }
-                                if(index==2){
+                                if(index==1){
                                   Navigator.push(context, MaterialPageRoute(builder: (_)=>    ContentTablePage()));
                                 }
 
 
-                                if(index==1){
-                                  Navigator.push(context, MaterialPageRoute(builder: (_)=>StripePaymentPage()));
-                                }
+
                               },
                               child: Container(
                                 // color: darkController.isDark==false?Colors.black.withOpacity(0.5) :Colors.white,
-                                child: Column(
-                                  children: [
-                                    Image.asset(data["image"]),
-                                    Text(
-                                      data["name"],
-                                      style: GoogleFonts.poppins(
-                                          color: Color(0xff5D646F),
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 12),
-                                    )
-                                  ],
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 20),
+                                  child: Column(
+
+                                    children: [
+                                      Image.asset(data["image"]),
+                                      Text(
+                                        data["name"],
+                                        style: GoogleFonts.poppins(
+                                            color: Color(0xff5D646F),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             );

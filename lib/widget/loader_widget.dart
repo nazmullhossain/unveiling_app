@@ -27,7 +27,7 @@ class LoaderWidget{
       isDismissible: true,
       shouldIconPulse: true,
       colorText: Colors.white,
-      backgroundColor:Color(0xffFFC0CB),
+      backgroundColor: Color(0xff003300),
       duration: Duration(seconds: 3),
       snackPosition: SnackPosition.BOTTOM,
       margin: EdgeInsets.all(10),

@@ -88,7 +88,7 @@ class SignUpController extends GetxController {
           id: userCradiatial.user!.uid,
         monthTime: DateTime.now(),
           yearTime: DateTime.now(),
-          ispayment: false,
+          ispayment: true,
           profilePic: "");
       await authReposityConroller.saveUserRecord(newUser);
 
